@@ -1,10 +1,12 @@
 # https1m
 
-给网站一张浏览器信任的 SSL 证书，大约 1 分钟。
+免费 SSL 证书 · Let’s Encrypt · HTTPS · TLS · ACME · 通配符证书 · 1 分钟签发
+
+`ssl` `https` `tls` `letsencrypt` `acme` `ssl-certificate` `wildcard-ssl` `free-ssl` `https-certificate` `nginx` `apache` `caddy` `baota`
 
 **打开网站试用：[https://ssl.ccrate.cc](https://ssl.ccrate.cc)**
 
-Let’s Encrypt 签发，浏览器信任，90 天有效。到期前会自动续签。
+浏览器信任的 SSL / HTTPS 证书，Let’s Encrypt 签发，90 天有效，到期自动续签。适合网站、API、宝塔、Nginx、Apache、Caddy。
 
 ## 流程
 
@@ -19,11 +21,11 @@ Let’s Encrypt 签发，浏览器信任，90 天有效。到期前会自动续�
 进入控制台，点 **免费申请**。域名不要加 `http://`。
 
 - 填 `example.com` 或 `*.example.com`
-- 默认按通配符签发，根域和一级子域名都能用
+- 默认按通配符签发（wildcard SSL），根域和一级子域名都能用
 
 ### 3. 添加 CNAME
 
-页面会给出主机记录和记录值，到域名 DNS 加 **一条 CNAME**。
+页面会给出主机记录和记录值，到域名 DNS 加 **一条 CNAME** 做 ACME 验证。
 
 Cloudflare 不要开小云朵（代理）。这条记录只需配一次，续签也靠它，加好后不要删。
 
@@ -38,3 +40,7 @@ Cloudflare 不要开小云朵（代理）。这条记录只需配一次，续签
 登录后打开 **自动部署**，按页面复制命令，在服务器用 root 执行。看到「全部完成」即可。
 
 之后这台机器会出现在 **主机管理**。新签发或即将到期的证书，会自动写到这台机器。
+
+## 关键词
+
+免费SSL、SSL证书、HTTPS证书、Let’s Encrypt、ACME、通配符证书、wildcard、TLS、宝塔SSL、Nginx SSL、Apache SSL、Caddy HTTPS、域名证书、自动续签
