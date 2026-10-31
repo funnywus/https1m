@@ -8,6 +8,10 @@
 
 浏览器信任的 SSL / HTTPS 证书，Let’s Encrypt 签发，90 天有效，到期自动续签。适合网站、API、宝塔、Nginx、Apache、Caddy。
 
+<p align="center">
+  <img src="images/01-home.png" alt="https1m 首页" width="800">
+</p>
+
 ## 流程
 
 注册 → 填写域名 → 加一条 CNAME → 约 1 分钟出证 → 下载，或按页面部署到服务器
@@ -15,6 +19,11 @@
 ### 1. 注册登录
 
 打开 [https://ssl.ccrate.cc](https://ssl.ccrate.cc)，用邮箱注册并登录。申请记录跟这个账号走。
+
+<p>
+  <img src="images/02-register.png" alt="邮箱注册" width="420">
+  <img src="images/03-login.png" alt="登录" width="420">
+</p>
 
 ### 2. 申请证书
 
@@ -26,6 +35,10 @@
 ### 3. 添加 CNAME
 
 页面会给出主机记录和记录值，到域名 DNS 加 **一条 CNAME** 做 ACME 验证。
+
+<p>
+  <img src="images/04-cname.png" alt="CNAME 记录示意" width="420">
+</p>
 
 Cloudflare 不要开小云朵（代理）。这条记录只需配一次，续签也靠它，加好后不要删。
 
